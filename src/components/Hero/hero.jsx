@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import Heart from "../../assets/heart.png";
 import Header from "../Header/Header";
-import Hero_image from "../../assets/images_tuan/hero.png";
+import Hero_image from "../../assets/images_tuan/hero-image.png";
 import Hero_image_back from "../../assets/hero_image_back.png";
 import Calories from "../../assets/calories.png";
 import NumberCounter from "number-counter";
@@ -67,7 +67,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="right-h">
-        {/* <button className="btn"></button> */}
         <motion.div
           initial={{ right: "-1rem" }}
           whileInView={{ right: "4rem" }}
@@ -79,15 +78,20 @@ const Hero = () => {
           <span>bpm</span>
         </motion.div>
 
-        <img src={Hero_image} alt="" className="hero-image" />
-        <motion.img
-          initial={{ right: "11rem" }}
-          whileInView={{ right: "20rem" }}
-          transition={transaction}
-          src={Hero_image_back}
-          alt=""
-          className="hero-image-back"
-        />
+        <div className="hero-image-section">
+          <div className="image-container">
+            <img src={Hero_image} alt="houses" />
+          </div>
+
+          <motion.img
+            initial={{ right: "11rem" }}
+            whileInView={{ right: "20rem" }}
+            transition={transaction}
+            src={Hero_image_back}
+            alt=""
+            className="hero-image-back"
+          />
+        </div>
 
         <motion.div
           initial={{ right: "37rem" }}

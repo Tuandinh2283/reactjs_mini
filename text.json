@@ -1,0 +1,468 @@
+{
+  "intents": [
+    { "name": "hoc_tap" },
+    { "name": "da_bong" },
+    { "name": "quan_cafe" },
+    { "name": "tam_ly_phu_nu" }
+  ],
+  "expressions": [
+    {
+      "text": "Làm sao để học tốt môn toán?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Cách học ngoại ngữ hiệu quả?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Phương pháp ghi nhớ nhanh?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Làm thế nào để tập trung khi học?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    { "text": "Học nhóm có tốt không?", "intent": "hoc_tap", "entities": [] },
+    {
+      "text": "Lịch học hợp lý nên thế nào?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Mẹo thi trắc nghiệm dễ đậu?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Cách luyện đề thi hiệu quả?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Nên học online hay học trực tiếp?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Thời gian học bao lâu là đủ?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Học kiểu nào giúp nhớ lâu hơn?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Có nên học thêm ở trung tâm?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    { "text": "Cách giải đề Toán nhanh?", "intent": "hoc_tap", "entities": [] },
+    {
+      "text": "Lời khuyên cho sinh viên năm nhất?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Học từ vựng tiếng Anh thế nào?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để tránh mất tập trung?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Có nên học thêm kỹ năng mềm?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Tự học có hiệu quả không?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Cách lên kế hoạch học tập?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Có nên học nhóm cuối tuần?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Làm thế nào để không bị stress khi học?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Học tập và giải trí nên cân bằng ra sao?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Cách đọc hiểu nhanh văn bản dài?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để không trì hoãn học?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+    {
+      "text": "Học trực tuyến nên lưu ý gì?",
+      "intent": "hoc_tap",
+      "entities": []
+    },
+
+    { "text": "Cách sút bóng chuẩn?", "intent": "da_bong", "entities": [] },
+    {
+      "text": "Tập kỹ thuật rê bóng thế nào?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để chạy nhanh trên sân?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Luyện tập đá phạt hiệu quả?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Tư thế đứng bắt penalty đúng?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Cách phối hợp đội hình đá bóng?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Làm sao tăng sức bền khi đá bóng?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Những bài tập chân hiệu quả?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Cách giữ bóng khi tranh chấp?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Lời khuyên cho người mới chơi bóng?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để kiểm soát bóng tốt hơn?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Cách luyện phản xạ nhanh?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Tập thể lực cho cầu thủ như thế nào?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Đá bóng bao lâu thì phát triển kỹ năng?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    { "text": "Cách phòng thủ hiệu quả?", "intent": "da_bong", "entities": [] },
+    {
+      "text": "Cách phối hợp với đồng đội trên sân?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Tư thế sút bóng mạnh và chính xác?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Cách giữ thể lực khi thi đấu liên tục?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để phòng tránh chấn thương?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Luyện tập đá bóng ngoài trời hay sân trong?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Cách xử lý bóng trong không gian hẹp?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để tăng khả năng chuyền bóng?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Kỹ thuật chuyền bóng ngắn và dài?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Cách làm nóng người trước khi đá bóng?",
+      "intent": "da_bong",
+      "entities": []
+    },
+    {
+      "text": "Thời gian tập luyện phù hợp cho người mới?",
+      "intent": "da_bong",
+      "entities": []
+    },
+
+    {
+      "text": "Quán mở cửa lúc mấy giờ?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    { "text": "Quán có wifi không?", "intent": "quan_cafe", "entities": [] },
+    { "text": "Menu có gì đặc biệt?", "intent": "quan_cafe", "entities": [] },
+    { "text": "Có chỗ đậu xe không?", "intent": "quan_cafe", "entities": [] },
+    { "text": "Có giao hàng không?", "intent": "quan_cafe", "entities": [] },
+    { "text": "Quán nằm ở đâu?", "intent": "quan_cafe", "entities": [] },
+    { "text": "Giá cả như thế nào?", "intent": "quan_cafe", "entities": [] },
+    {
+      "text": "Quán có chỗ ngồi ngoài trời không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có phục vụ đồ ăn nhẹ không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Có chương trình khuyến mãi nào không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có chỗ chơi cho trẻ em không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Có chỗ làm việc yên tĩnh không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Đồ uống nào bán chạy nhất?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có chỗ hút thuốc không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Có phục vụ đồ uống take away?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có không gian trang trí thế nào?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Có tổ chức sự kiện tại quán không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có chỗ ngồi cho nhóm lớn không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có phục vụ cà phê đặc sản không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Có phục vụ đồ uống có cồn không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Có chương trình thẻ thành viên không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có phục vụ vào cuối tuần không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có bảo đảm vệ sinh an toàn thực phẩm không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Có hỗ trợ đặt chỗ trước không?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+    {
+      "text": "Quán có dịch vụ wifi tốc độ cao?",
+      "intent": "quan_cafe",
+      "entities": []
+    },
+
+    {
+      "text": "Tại sao con gái hay giận?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để hiểu tâm lý phụ nữ?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ cần gì trong tình yêu?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Tâm lý phụ nữ khi căng thẳng?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Cách giải quyết mâu thuẫn với bạn gái?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ thường suy nghĩ gì khi im lặng?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để làm vui lòng người yêu?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Tại sao phụ nữ hay nhớ kỹ chuyện cũ?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Cách nhận biết phụ nữ đang buồn?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ thường mong muốn gì ở đối phương?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Tâm lý phụ nữ khi cảm thấy bị lừa dối?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để thấu hiểu cảm xúc phụ nữ?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ có xu hướng nói nhiều hơn đàn ông?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Cách giao tiếp hiệu quả với phụ nữ?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ thường phản ứng thế nào khi bị tổn thương?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Tại sao phụ nữ thích được quan tâm?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để tạo niềm tin với phụ nữ?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ dễ bị ảnh hưởng bởi cảm xúc?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Cách xử lý khi phụ nữ nổi giận?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Tâm lý phụ nữ khi yêu và khi kết hôn khác nhau thế nào?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ thường quan tâm điều gì trong gia đình?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Làm sao để giữ mối quan hệ tốt với phụ nữ?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Phụ nữ hay suy nghĩ nhiều về điều gì?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    },
+    {
+      "text": "Cách giúp phụ nữ cảm thấy an toàn?",
+      "intent": "tam_ly_phu_nu",
+      "entities": []
+    }
+  ]
+}

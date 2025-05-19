@@ -4,17 +4,87 @@
 }
 
 .Footer-container > hr {
-  border: 1px solid var(--lightgray);
+  border: 1px solid var(--lightgray); /* You might need to define this variable */
 }
 
 .footer {
+  margin-top: 1rem;
   padding: 1rem 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Changed to column */
   align-items: center;
   justify-content: center;
-  height: 16rem;
+  height: auto;
   gap: 2rem;
+}
+
+.footer_chilren {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px 0 20 0;
+  font-family: Arial, sans-serif;
+  margin-left: 0;
+  width: 33%;
+}
+
+.info-item {
+  width: 100%;
+}
+
+.info-content {
+  text-align: left;
+}
+
+.info-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.info-text,
+.info-content a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.info-content a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 33%;
+}
+
+.intrduce_con {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header-nav {
+  list-style: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.map {
+  width: 33%;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .social-links {
@@ -48,6 +118,7 @@
   filter: blur(200px);
   background: rgb(53, 206, 234);
 }
+
 .blur-f-2 {
   bottom: 0;
   left: 15%;
@@ -55,4 +126,56 @@
   height: 12rem;
   filter: blur(200px);
   background: rgb(25, 182, 235);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer_chilren {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .info-container,
+  .introduce,
+  .map {
+    width: 100%;
+  }
+}
+.map {
+  width: 33%;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.map,
+.info-container,
+.introduce {
+  width: 33%;
+}
+@media (max-width: 768px) {
+  .footer_chilren {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map,
+  .info-container,
+  .introduce {
+    width: 100%;
+  }
+
+  .map iframe {
+    height: 200px;
+  }
 }

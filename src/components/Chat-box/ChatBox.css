@@ -1,0 +1,130 @@
+.chatbox-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.chatbox {
+  width: 300px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chatbox-header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbox-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f7f7f7;
+}
+
+.chatbox-message {
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  max-width: 85%;
+  line-height: 1.4;
+}
+
+.chatbox-message.bot {
+  background-color: #e0f7fa;
+  align-self: flex-start;
+}
+
+.chatbox-message.user {
+  background-color: #c8e6c9;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.chatbox-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+.chatbox-footer input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.chatbox-footer button {
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chatbox-footer button:hover {
+  background-color: var(--primary);
+}
+
+.chatbox-toggle {
+  background-color: rgb(58, 58, 236);
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.chatbox-toggle:hover {
+  transform: scale(1.1);
+  background-color: var(--primary);
+}
+
+.chatbox-toggle svg {
+  fill: white;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.exit {
+  border: none;
+  color: black;
+  font-size: 1rem;
+  background-color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.exit:hover {
+  color: #f44336;
+}
