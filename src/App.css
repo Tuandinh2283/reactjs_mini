@@ -49,8 +49,9 @@ label {
   background-color: var(--appColor);
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 3rem;
   overflow: hidden;
+  padding: 2rem 2rem;
 }
 #tsparticles {
   position: fixed;

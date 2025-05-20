@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../../components/Reasons/Reasons.css";
+import "./Reasons.css";
 import image2 from "../../assets/images_tuan/hero.png";
 import image3 from "../../assets/images_tuan/image_football.jpg";
 import image4 from "../../assets/images_tuan/images_football.jpg";

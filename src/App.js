@@ -9,6 +9,11 @@ import Join from "./components/Join/Join";
 import Footer from "./components/Footer/Footer";
 import ChatBox from "./components/Chat-box/ChatBox";
 import { MouseTrail } from "./components/MouseTrail/MouseTrail";
+import Companies from "./components/Companies/Companies";
+import Residentcies from "./components/Residencies/Residencies";
+import Value from "./components/Value/Value";
+import Sidebar from "./components/Sidebar/Sidebar";
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -37,8 +42,12 @@ function App() {
       >
         {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
       </button>
+      <Sidebar />
       <Hero />
       <Programs />
+      <Companies />
+      <Residentcies />
+      <Value />
       <Reasons />
       <Plans />
       <Testimonials />

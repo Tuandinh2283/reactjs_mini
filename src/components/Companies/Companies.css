@@ -1,0 +1,19 @@
+.c-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.c-container img {
+  height: 7rem; /* chỉnh chiều cao logo cho đồng đều */
+  object-fit: contain;
+  filter: grayscale(100%); /* tùy chọn làm logo đen trắng */
+  transition: all 0.3s ease;
+}
+
+.c-container img:hover {
+  filter: none; /* khi hover thì hiện màu */
+  transform: scale(1.1); /* phóng to nhẹ */
+}

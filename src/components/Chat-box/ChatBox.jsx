@@ -12,6 +12,194 @@ const faqList = [
     answer: "🚚 Quán có giao hàng qua các ứng dụng như Grab, Now, Baemin...",
   },
   {
+    question: "chào bạn",
+    answer: "👋 Xin chào bạn! Mình có thể giúp gì cho bạn hôm nay?",
+  },
+  {
+    question: "hello",
+    answer: "🌟 Hello! Rất vui được gặp bạn!",
+  },
+  {
+    question: "xin chào",
+    answer: "😊 Chào bạn! Chúc bạn một ngày tuyệt vời!",
+  },
+  {
+    question: "hi",
+    answer: "🙌 Hi bạn! Cần mình hỗ trợ gì không?",
+  },
+  {
+    question: "alo",
+    answer: "📞 Alo alo! Mình nghe rõ nè!",
+  },
+  {
+    question: "có ai ở đó không",
+    answer: "👀 Mình luôn sẵn sàng ở đây để hỗ trợ bạn!",
+  },
+  {
+    question: "bạn là ai",
+    answer: "🤖 Mình là trợ lý ảo của hệ thống, luôn sẵn sàng giúp bạn!",
+  },
+  {
+    question: "bạn làm được gì",
+    answer:
+      "📋 Mình có thể trả lời các câu hỏi thường gặp và hỗ trợ bạn về thông tin của quán nhé!",
+  },
+  {
+    question: "rất vui được gặp bạn",
+    answer: "🥰 Mình cũng rất vui được gặp bạn!",
+  },
+  {
+    question: "bạn khỏe không",
+    answer: "💪 Mình luôn trong trạng thái tốt nhất để hỗ trợ bạn!",
+  },
+  {
+    question: "chào buổi sáng",
+    answer: "🌅 Chào buổi sáng! Chúc bạn một ngày tràn đầy năng lượng!",
+  },
+  {
+    question: "chào buổi chiều",
+    answer: "🌇 Chào buổi chiều! Có thể mình giúp gì cho bạn?",
+  },
+  {
+    question: "chào buổi tối",
+    answer: "🌙 Chào buổi tối! Hy vọng bạn đã có một ngày tuyệt vời!",
+  },
+  {
+    question: "ngày mới tốt lành",
+    answer: "🌻 Chúc bạn một ngày mới an lành và may mắn!",
+  },
+  {
+    question: "bạn tên gì",
+    answer:
+      "📛 Mình là chatbot hỗ trợ thông tin – bạn có thể gọi mình là Trợ lý!",
+  },
+  {
+    question: "mình cần giúp đỡ",
+    answer: "🙋‍♂️ Có mình đây! Bạn cần giúp đỡ về điều gì?",
+  },
+  {
+    question: "cho mình hỏi chút",
+    answer: "📝 Bạn cứ hỏi tự nhiên nhé, mình sẵn sàng hỗ trợ!",
+  },
+  {
+    question: "tôi có câu hỏi",
+    answer: "❓ Bạn cứ hỏi đi, mình sẽ trả lời nhanh nhất có thể!",
+  },
+  {
+    question: "ai tạo ra bạn",
+    answer:
+      "🛠️ Mình được tạo ra bởi nhóm phát triển để hỗ trợ bạn tốt hơn mỗi ngày!",
+  },
+  {
+    question: "bạn có hiểu tôi không",
+    answer:
+      "🧠 Mình sẽ cố gắng hết sức để hiểu và trả lời đúng nhu cầu của bạn!",
+  },
+  {
+    question: "làm sao để học tốt hơn",
+    answer:
+      "📚 Hãy tạo thói quen học tập đều đặn, đặt mục tiêu cụ thể và nghỉ ngơi hợp lý bạn nhé!",
+  },
+  {
+    question: "cách học hiệu quả là gì",
+    answer:
+      "🧠 Học hiệu quả là học có mục tiêu, ôn lại kiến thức, thực hành thường xuyên và tránh học dồn.",
+  },
+  {
+    question: "học online có hiệu quả không",
+    answer:
+      "💻 Nếu bạn có kỷ luật tốt và môi trường yên tĩnh, học online vẫn rất hiệu quả nhé!",
+  },
+  {
+    question: "nên học buổi sáng hay buổi tối",
+    answer:
+      "🌞⏰ Tùy vào cơ địa mỗi người, nhưng buổi sáng thường giúp tập trung tốt hơn và ghi nhớ lâu hơn.",
+  },
+  {
+    question: "làm sao để không buồn ngủ khi học",
+    answer:
+      "☕ Ngủ đủ giấc, học ở nơi có ánh sáng tốt và nghỉ giải lao sau mỗi 25 phút học sẽ giúp bạn tỉnh táo hơn.",
+  },
+  {
+    question: "có nên học nhiều môn cùng lúc không",
+    answer:
+      "📖 Tốt nhất là nên học xen kẽ để tránh chán, nhưng đừng ôm đồm quá nhiều trong một ngày nhé!",
+  },
+  {
+    question: "nên học trước kỳ thi bao lâu",
+    answer:
+      "🗓️ Học từ sớm là tốt nhất, nhưng nếu gấp thì ít nhất bạn nên chuẩn bị trước kỳ thi khoảng 1–2 tuần.",
+  },
+  {
+    question: "làm sao để nhớ lâu kiến thức",
+    answer:
+      "🧠 Lặp lại kiến thức, liên kết với ví dụ thực tế và giải bài tập thường xuyên sẽ giúp nhớ lâu hơn.",
+  },
+  {
+    question: "ôn thi như thế nào cho hiệu quả",
+    answer:
+      "✍️ Tổng hợp lại kiến thức chính, giải đề, làm flashcards và chia nhỏ thời gian học là cách rất tốt.",
+  },
+  {
+    question: "học nhóm có lợi không",
+    answer:
+      "👥 Có! Học nhóm giúp bạn trao đổi kiến thức, giải thích cho nhau và dễ nhớ bài hơn.",
+  },
+  {
+    question: "nên dùng app nào để học",
+    answer:
+      "📱 Có nhiều app như Quizlet, Anki, Notion, Duolingo… tùy vào môn học bạn đang cần.",
+  },
+  {
+    question: "làm sao để tập trung khi học",
+    answer:
+      "🔕 Tắt thông báo điện thoại, chia thời gian học theo Pomodoro và chọn nơi yên tĩnh sẽ rất hiệu quả.",
+  },
+  {
+    question: "có nên nghe nhạc khi học không",
+    answer:
+      "🎧 Nếu là nhạc nhẹ hoặc nhạc không lời thì có thể giúp bạn thư giãn và tăng tập trung.",
+  },
+  {
+    question: "tôi không hiểu bài thì làm sao",
+    answer:
+      "🧑‍🏫 Bạn có thể hỏi giáo viên, bạn bè hoặc tìm video hướng dẫn trên YouTube để dễ hiểu hơn.",
+  },
+  {
+    question: "làm sao để học tiếng Anh tốt hơn",
+    answer:
+      "🇬🇧 Hãy luyện nghe mỗi ngày, học từ vựng theo chủ đề và nói chuyện với người khác càng nhiều càng tốt.",
+  },
+  {
+    question: "học một mình có hiệu quả không",
+    answer:
+      "🧘 Hoàn toàn có nếu bạn biết cách lên kế hoạch và tự tạo động lực học mỗi ngày.",
+  },
+  {
+    question: "tôi học mãi không vào",
+    answer:
+      "😓 Đừng lo, bạn có thể thay đổi cách học, thử ghi chú bằng hình ảnh hoặc giảng lại cho người khác.",
+  },
+  {
+    question: "học gì để giỏi lập trình",
+    answer:
+      "💻 Bắt đầu với HTML, CSS, JavaScript hoặc Python, và thực hành dự án nhỏ sẽ giúp bạn tiến bộ nhanh.",
+  },
+  {
+    question: "tôi bị áp lực khi học",
+    answer:
+      "😔 Hãy nghỉ ngơi, chia nhỏ mục tiêu và đừng so sánh bản thân với người khác. Bạn làm được mà!",
+  },
+  {
+    question: "nên học ở đâu yên tĩnh",
+    answer:
+      "📖 Thư viện, góc học tập riêng ở nhà hoặc quán cà phê yên tĩnh là những nơi lý tưởng để học tập.",
+  },
+  {
+    question: "Chào bạn",
+    answer: "Xin chào",
+  },
+  {
     question: "địa chỉ quán ở đâu",
     answer: "📍 Quán nằm tại 123 Đường Aroma, TP. Hương Thơm.",
   },
