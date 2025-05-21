@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Testimonials from "./assets/Testimonials/Testimonials";
 import Hero from "./components/Hero/hero";
 import Plans from "./components/Plans/Plans";
@@ -14,35 +16,12 @@ import Residentcies from "./components/Residencies/Residencies";
 import Value from "./components/Value/Value";
 import Sidebar from "./components/Sidebar/Sidebar";
 
-function App() {
-  const [darkMode, setDarkMode] = useState(false);
+// ✅ Trang Music
+import Music from "./Music/Music";
 
-  useEffect(() => {
-    document.documentElement.className = darkMode ? "dark-theme" : "";
-  }, [darkMode]);
-
+function HomePage() {
   return (
-    <div className="App">
-      {/* Nút đổi theme */}
-      <MouseTrail />
-      <button
-        onClick={() => setDarkMode((prev) => !prev)}
-        style={{
-          position: "fixed",
-          top: "1rem",
-          right: "1rem",
-          zIndex: 1000,
-          backgroundColor: "var(--orange)",
-          color: "white",
-          padding: "0.5rem 1rem",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-        }}
-      >
-        {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
-      </button>
-      <Sidebar />
+    <>
       <Hero />
       <Programs />
       <Companies />
@@ -53,8 +32,46 @@ function App() {
       <Testimonials />
       <Join />
       <Footer />
-      <ChatBox />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.className = darkMode ? "dark-theme" : "";
+  }, [darkMode]);
+
+  return (
+    <Router>
+      <div className="App">
+        <MouseTrail />
+        <button
+          onClick={() => setDarkMode((prev) => !prev)}
+          style={{
+            position: "fixed",
+            top: "1rem",
+            right: "1rem",
+            zIndex: 1000,
+            backgroundColor: "var(--orange)",
+            color: "white",
+            padding: "0.5rem 1rem",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+        </button>
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/music" element={<Music />} />
+        </Routes>
+        <ChatBox />
+      </div>
+    </Router>
   );
 }
 

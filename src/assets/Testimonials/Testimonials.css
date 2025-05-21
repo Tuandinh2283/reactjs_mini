@@ -1,7 +1,7 @@
 .Testimonials {
   display: flex;
   gap: 1rem;
-  padding: 0 2rem;
+  padding-left: 5rem;
 }
 
 .left-t {

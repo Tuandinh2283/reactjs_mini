@@ -45,7 +45,13 @@ const Footer = () => {
             <div className="info-item">
               <div className="info-content">
                 <div className="info-title">Website:</div>
-                <a href={{}}></a>
+                <a
+                  href="https://softdreams.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  softdreams.vn
+                </a>
               </div>
             </div>
           </div>
