@@ -1,0 +1,91 @@
+.language-dropdown {
+  position: relative;
+  font-family: sans-serif;
+  z-index: 9999;
+}
+
+/* Nút dropdown mặc định (sáng) */
+.dropdown-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  text-align: left;
+}
+
+/* Menu dropdown mặc định (sáng) */
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  min-width: 220px;
+  overflow: hidden;
+}
+
+/* Item trong menu */
+.dropdown-item {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Item đang được chọn */
+.dropdown-item.selected {
+  background-color: rgba(255, 102, 0, 0.1);
+  font-weight: bold;
+}
+
+/* Hover trên item */
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* ==================== Dark mode ==================== */
+/* Khi phần tử cha có class .dark, đổi màu cho phù hợp màn tối */
+
+/* Nền dropdown và chữ */
+.dark .language-dropdown {
+  /* Bạn có thể đổi nền dropdown nếu muốn */
+  /* background-color: #121212; */
+}
+
+.dark .dropdown-button {
+  background-color: #121212;
+  color: #eee !important; /* chữ sáng */
+  border: 1px solid #555;
+  box-shadow: none;
+}
+
+/* Menu dropdown */
+.dark .dropdown-menu {
+  background-color: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Item trong menu */
+.dark .dropdown-item {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+/* Item được chọn */
+.dark .dropdown-item.selected {
+  background-color: rgba(255, 102, 0, 0.3);
+  font-weight: bold;
+}
+
+/* Hover trên item */
+.dark .dropdown-item:hover {
+  background-color: #333;
+}

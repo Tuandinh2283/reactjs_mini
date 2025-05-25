@@ -35,8 +35,8 @@ const Hero = () => {
           </div>
           <div>
             <span>
-              in here we will help you to shape and build your ideal body and
-              live up your life to fullest
+              "Hi, I'm your virtual fitness assistant, here to guide you on your
+              journey to a healthier and stronger you."
             </span>
           </div>
         </div>
@@ -67,17 +67,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="right-h">
-        <motion.div
-          initial={{ right: "-1rem" }}
-          whileInView={{ right: "4rem" }}
-          transition={transaction}
-          className="heart-rate"
-        >
-          <img src={Heart} alt="" />
-          <span>Heart Rate</span>
-          <span>bpm</span>
-        </motion.div>
-
         <div className="hero-image-section">
           <div className="image-container">
             <img src={Hero_image} alt="houses" />

@@ -18,20 +18,24 @@ const Plans = () => {
         {plansData.map((plan) => (
           <div className="plan" key={plan.id}>
             {plan.icon}
-            <span>{plan.name}</span>
-            <span>{plan.price}</span>
-            <div className="features">
+            <span style={{ color: "black" }}>{plan.name}</span>
+            <span style={{ color: "black" }}>{plan.price}</span>
+            <div className="features" style={{ color: "black" }}>
               {plan.features.map((feature, i) => (
-                <div className="feature">
+                <div className="feature" style={{ color: "black" }}>
                   <img src={whileTick} alt="" />
-                  <span key={i}>{feature}</span>
+                  <span key={i} style={{ color: "black" }}>
+                    {feature}
+                  </span>
                 </div>
               ))}
             </div>
             <div>
-              <span>See more benefits -</span>
+              <span style={{ color: "black" }}>See more benefits -</span>
             </div>
-            <button className="btn">Join</button>
+            <button className="btn" style={{ color: "black" }}>
+              Join
+            </button>
           </div>
         ))}
       </div>

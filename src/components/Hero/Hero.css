@@ -1,24 +1,26 @@
+/* --- DESKTOP FIRST STYLE --- */
 .hero {
   display: flex;
   justify-content: space-between;
   padding-left: 2rem;
+  gap: 2rem;
 }
 
 .left-h {
   padding: 2rem;
-  padding-top: 1.5rem;
   flex: 3;
   display: flex;
   gap: 2rem;
   flex-direction: column;
 }
+
 .right-h {
   flex: 1;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 3rem; /* Tạo khoảng cách giữa các block */
+  gap: 3rem;
   padding-right: 2rem;
   padding-top: 5rem;
 }
@@ -36,9 +38,11 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .the-best-ad > span {
   z-index: 2;
 }
+
 .the-best-ad > div {
   position: absolute;
   background-color: var(--primary);
@@ -56,7 +60,6 @@
   font-size: 4.5rem;
   font-weight: bold;
   color: white;
-  text-overflow: inherit;
 }
 
 .hero-text > div:nth-of-type(3) {
@@ -70,6 +73,7 @@
 .figures {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .figures > div {
@@ -81,32 +85,25 @@
   font-size: 2rem;
 }
 
-.figures > div > span:nth-of-type(2) {
-  text-transform: none;
-}
-
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  font-weight: normal;
+  flex-wrap: wrap;
 }
+
+.hero-buttons > :nth-child(1),
+.hero-buttons > :nth-child(2) {
+  width: 8rem;
+}
+
 .hero-buttons > :nth-child(1) {
   color: white;
   background-color: var(--primary);
-  width: 8rem;
 }
 
 .hero-buttons > :nth-child(2) {
   background-color: transparent;
-  width: 8rem;
   border: 2px solid var(--primary);
-}
-
-.right-h > btn {
-  position: absolute;
-  right: 3rem;
-  top: 2rem;
-  color: black;
 }
 
 .heart-rate {
@@ -114,16 +111,13 @@
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
-
   position: absolute;
   right: 4rem;
   top: 7rem;
-
-  background-color: #2b2b2b; /* nền tối rõ hơn */
+  background-color: #2b2b2b;
   padding: 1rem 1.5rem;
   border-radius: 1.5rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-
   color: white;
   font-family: "Poppins", sans-serif;
   z-index: 10;
@@ -131,16 +125,6 @@
   min-width: 8rem;
 }
 
-.heart-rate > :nth-child(2) {
-  color: #bbb;
-  font-size: 1rem;
-  font-weight: 400;
-}
-.heart-rate > :nth-child(3) {
-  color: #ff4c4c;
-  font-size: 1.6rem;
-  font-weight: bold;
-}
 .heart-rate > img {
   width: 2.5rem;
   height: 2.5rem;
@@ -153,6 +137,7 @@
   right: -6rem;
   width: 70rem;
 }
+
 .hero-image-back {
   position: absolute;
   top: 2rem;
@@ -174,12 +159,13 @@
   right: 40rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .image-container {
   width: 30rem;
   height: 35rem;
   overflow: hidden;
-  margin-right: 2rem; /* cách phải nếu cần */
-  border-radius: 15rem 15rem 0 0; /* Bán nguyệt trên */
+  margin-right: 2rem;
+  border-radius: 15rem 15rem 0 0;
   border: 8px solid rgba(255, 255, 255, 0.12);
   background-color: black;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -192,110 +178,112 @@
   padding-right: 5rem;
 }
 
-.calories:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-}
-
-.calories > img {
-  width: 3.5rem;
-  height: 3.5rem;
-  object-fit: contain;
-  filter: hue-rotate(180deg) brightness(1.05); /* làm ảnh xanh nhẹ hơn */
-}
-
-.calories > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.4rem;
-}
-
-.calories > div .value {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #00796b; /* xanh đậm */
-}
-
-.calories > div .label {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.calories > div > :nth-child(1) {
-  color: var(--gray);
-}
-.calories > div > :nth-child(2) {
-  color: white;
-  font-size: 1.6rem;
-}
-
 .hero-blur {
   width: 28rem;
   height: 30rem;
   left: 0;
   background: rgb(10, 184, 228);
 }
+
+/* ============================ */
+/* -------- RESPONSIVE -------- */
+/* ============================ */
+
+@media screen and (max-width: 1024px) {
+  .hero-text {
+    font-size: 3rem;
+  }
+
+  .hero-image {
+    width: 40rem;
+    right: 0;
+  }
+
+  .hero-image-back {
+    right: 10rem;
+  }
+
+  .calories {
+    right: 20rem;
+    top: 32rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero {
     flex-direction: column;
-  }
-  .hero-blur {
-    width: 14rem;
-  }
-  .the-best-ad {
-    margin-top: 0;
-    font-size: small;
-    align-self: center;
-    transform: scale(0.8);
-  }
-  .heart-text {
-    font-size: xx-large;
     align-items: center;
-    justify-content: center;
+    padding: 1rem;
   }
-  .heart-text > div:nth-of-type(3) {
-    font-size: small;
-    font-weight: 200;
-    letter-spacing: 1px;
+
+  .left-h {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .right-h {
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  .hero-text {
+    font-size: 2.2rem;
+    align-items: center;
     text-align: center;
   }
+
+  .hero-text > div:nth-of-type(3) {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .figures {
+    justify-content: center;
+  }
+
   .hero-buttons {
     justify-content: center;
   }
-  .figures > div > span:nth-of-type(1) {
-    font-size: large;
-  }
-  .figures > div > span:nth-of-type(2) {
-    font-size: large;
-  }
-  .right-h {
-    position: relative;
-    background: none;
-  }
-  .heart-rate {
-    left: 1rem;
-    top: 1rem;
-  }
-  .calories {
-    position: relative;
-    top: 5rem;
-    left: 2rem;
-  }
-  .calories > img {
-    color: white;
-    font-size: 1rem;
-  }
-  .hero-image {
-    position: relative;
-    width: 15rem;
-    left: 7rem;
-    top: 4rem;
+
+  .the-best-ad {
+    font-size: 0.8rem;
+    transform: scale(0.9);
     align-self: center;
   }
+
+  .heart-rate {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .calories {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .hero-image {
+    position: static;
+    width: 100%;
+    max-width: 20rem;
+    margin-top: 2rem;
+  }
+
   .hero-image-back {
-    width: 15rem;
-    left: 2rem;
-    top: 0rem;
+    display: none;
+  }
+
+  .image-container {
+    width: 90%;
+    height: auto;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .image-container > img {
+    padding-right: 0;
+  }
+
+  .hero-blur {
+    width: 14rem;
+    height: 14rem;
   }
 }
