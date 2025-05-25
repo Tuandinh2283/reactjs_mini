@@ -1,3 +1,5 @@
+/* ----- Giao diện chung (Desktop) ----- */
+
 .containers {
   background-color: white;
   width: 900px;
@@ -10,8 +12,8 @@
 }
 
 .login-wrapper {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100vh;
+  height: auto;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,11 +31,12 @@
 .input-box {
   position: relative;
   margin: 20px 0;
+  width: 84%;
 }
 
 .input-box input {
   width: 100%;
-  padding: 12px 40px 12px 15px;
+  padding: 12px 40px 12px 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
   background-color: #f5f5f5;
@@ -50,10 +53,10 @@
 }
 
 .btn {
-  margin-top: 20px;
+  margin-top: 15px;
   width: 100%;
   padding: 12px;
-  background-color: #93cde0; /* fallback if --primary is not set */
+  background-color: #93cde0;
   border: none;
   color: white;
   border-radius: 8px;
@@ -97,19 +100,20 @@
 
 .toggle-box {
   width: 50%;
-  background: linear-gradient(to bottom, #54c7ee);
+  background: linear-gradient(to bottom, #54c7ee, #42b6e6);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
+  height: auto;
+  padding: 20px 15px;
+  border-radius: 0 25px 25px 0;
 }
-.input-box {
-  width: 84%;
-}
+
 .toggle-panel {
-  max-width: 300px;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .toggle-panel h2 {
@@ -120,6 +124,7 @@
 .toggle-panel p {
   font-size: 14px;
   margin-bottom: 25px;
+  white-space: normal;
 }
 
 .toggle-panel .btn {
@@ -141,13 +146,77 @@
   border-radius: 6px;
   margin-bottom: 10px;
   font-size: 14px;
+  text-align: center;
 }
 
-/* Toggle active state */
+/* Toggle State */
 .containers.active .form-box.login {
   display: none;
 }
 
 .containers:not(.active) .form-box.register {
   display: none;
+}
+@media screen and (max-width: 430px) {
+  .login-wrapper {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .containers {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0;
+  }
+
+  .form-box,
+  .toggle-box {
+    width: 100%;
+    border-radius: 0;
+    padding: 25px 15px;
+  }
+
+  .form-box {
+    padding: 30px 15px;
+  }
+
+  .toggle-box {
+    order: -1;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .toggle-panel {
+    max-width: 80%;
+    word-break: break-word;
+  }
+
+  .toggle-panel h2 {
+    font-size: 24px;
+  }
+
+  .toggle-panel p {
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px;
+    width: 90%;
+    margin-top: 15px;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+
+  .input-box input {
+    width: 72%;
+  }
 }
