@@ -13,13 +13,15 @@ function Login() {
   const [error, setError] = useState(null);
   const [isRegistering, setIsRegistering] = useState(false);
   const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = isRegistering
-        ? "http://localhost:8080/api/auth"
-        : "http://localhost:8080/login";
+      const BASE_URL =
+        process.env.NODE_ENV === "development"
+          ? process.env.REACT_APP_LOCAL_API_URL
+          : process.env.REACT_APP_PROD_API_URL;
+
+      const url = isRegistering ? `${BASE_URL}/api/auth` : `${BASE_URL}/login`;
       const payload = isRegistering ? registerData : loginData;
 
       const response = await fetch(url, {
@@ -28,18 +30,22 @@ function Login() {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => null);
 
       if (response.ok) {
-        localStorage.setItem("token", data.token);
+        if (data?.token) {
+          localStorage.setItem("token", data.token);
+        }
         setError(null);
         alert(isRegistering ? "Đăng ký thành công!" : "Đăng nhập thành công!");
         if (!isRegistering) {
           navigate("/");
         }
       } else {
+        const errorMsg =
+          data?.message || (typeof data === "string" ? data : null);
         setError(
-          data?.message ||
+          errorMsg ||
             (isRegistering ? "Đăng ký thất bại" : "Đăng nhập thất bại")
         );
       }
@@ -95,21 +101,6 @@ function Login() {
             <button type="submit" className="btn">
               Login
             </button>
-            <p className="social-text">or login with social platforms</p>
-            <div className="social-icons">
-              <a href="#">
-                <i className="bx bxl-google"></i>
-              </a>
-              <a href="#">
-                <i className="bx bxl-facebook"></i>
-              </a>
-              <a href="#">
-                <i className="bx bxl-github"></i>
-              </a>
-              <a href="#">
-                <i className="bx bxl-linkedin"></i>
-              </a>
-            </div>
           </form>
         </div>
 
@@ -126,10 +117,7 @@ function Login() {
                 placeholder="Username"
                 value={registerData.username}
                 onChange={(e) =>
-                  setRegisterData({
-                    ...registerData,
-                    username: e.target.value,
-                  })
+                  setRegisterData({ ...registerData, username: e.target.value })
                 }
                 required
               />
@@ -141,10 +129,7 @@ function Login() {
                 placeholder="Email"
                 value={registerData.email}
                 onChange={(e) =>
-                  setRegisterData({
-                    ...registerData,
-                    email: e.target.value,
-                  })
+                  setRegisterData({ ...registerData, email: e.target.value })
                 }
                 required
               />
@@ -156,10 +141,7 @@ function Login() {
                 placeholder="Password"
                 value={registerData.password}
                 onChange={(e) =>
-                  setRegisterData({
-                    ...registerData,
-                    password: e.target.value,
-                  })
+                  setRegisterData({ ...registerData, password: e.target.value })
                 }
                 required
               />
@@ -168,21 +150,6 @@ function Login() {
             <button type="submit" className="btn">
               Register
             </button>
-            <p className="social-text">or register with social platforms</p>
-            <div className="social-icons">
-              <a href="#">
-                <i className="bx bxl-google"></i>
-              </a>
-              <a href="#">
-                <i className="bx bxl-facebook"></i>
-              </a>
-              <a href="#">
-                <i className="bx bxl-github"></i>
-              </a>
-              <a href="#">
-                <i className="bx bxl-linkedin"></i>
-              </a>
-            </div>
           </form>
         </div>
 
