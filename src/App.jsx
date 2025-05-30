@@ -5,7 +5,6 @@ import "./App.css";
 // Component layout phụ
 import Sidebar from "./components/Sidebar/Sidebar";
 import ChatBox from "./components/Chat-box/ChatBox";
-import LanguageDropdown from "./components/LanguageDropdown/LanguageDropdown";
 import { MouseTrail } from "./components/MouseTrail/MouseTrail";
 
 // Routes riêng
@@ -13,18 +12,25 @@ import AppRoutes from "./routes";
 
 function AppContent() {
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
   const [darkMode, setDarkMode] = useState(false);
 
+  // Các trang không hiển thị layout phụ
+  const minimalPages = ["/login", "/dashboard"];
+  const isMinimalPage = minimalPages.includes(location.pathname);
+
   useEffect(() => {
-    document.documentElement.className = darkMode ? "dark-theme" : "";
-  }, [darkMode]);
+    if (!isMinimalPage) {
+      document.documentElement.className = darkMode ? "dark-theme" : "";
+    } else {
+      document.documentElement.className = "";
+    }
+  }, [darkMode, location.pathname]);
 
   return (
     <div className="App relative">
-      {!isLoginPage && <MouseTrail />}
+      {!isMinimalPage && <MouseTrail />}
 
-      {!isLoginPage && (
+      {!isMinimalPage && (
         <div
           style={{
             position: "fixed",
@@ -36,7 +42,6 @@ function AppContent() {
             gap: "1rem",
           }}
         >
-          <LanguageDropdown />
           <button
             onClick={() => setDarkMode((prev) => !prev)}
             style={{
@@ -53,11 +58,11 @@ function AppContent() {
         </div>
       )}
 
-      {!isLoginPage && <Sidebar />}
+      {!isMinimalPage && <Sidebar />}
 
       <AppRoutes />
 
-      {!isLoginPage && <ChatBox />}
+      {!isMinimalPage && <ChatBox />}
     </div>
   );
 }

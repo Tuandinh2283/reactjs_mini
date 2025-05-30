@@ -9,17 +9,6 @@ const Sidebar = () => {
       <Link to="/" title="Home">
         <FaHome />
       </Link>
-      <Link to="/music" title="Music">
-        <FaMusic />
-      </Link>
-      <a
-        href="https://github.com/Tuandinh2283/reactjs_mini"
-        target="_blank"
-        rel="noreferrer"
-        title="GitHub"
-      >
-        <FaGithub />
-      </a>
       <Link to="/login" title="Login">
         <FaSignInAlt />
       </Link>

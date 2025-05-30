@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "boxicons/css/boxicons.min.css";
 import "./Login.css";
+import "../admin/Dashboard";
 
 function Login() {
   const [loginData, setLoginData] = useState({ username: "", password: "" });
@@ -13,6 +16,7 @@ function Login() {
   const [error, setError] = useState(null);
   const [isRegistering, setIsRegistering] = useState(false);
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -21,12 +25,17 @@ function Login() {
           ? process.env.REACT_APP_LOCAL_API_URL
           : process.env.REACT_APP_PROD_API_URL;
 
-      const url = isRegistering ? `${BASE_URL}/api/auth` : `${BASE_URL}/login`;
+      const url = isRegistering
+        ? `${BASE_URL}/api/auth/register`
+        : `${BASE_URL}/api/auth/login`;
       const payload = isRegistering ? registerData : loginData;
 
       const response = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(payload),
       });
 
@@ -35,11 +44,19 @@ function Login() {
       if (response.ok) {
         if (data?.token) {
           localStorage.setItem("token", data.token);
-        }
-        setError(null);
-        alert(isRegistering ? "Đăng ký thành công!" : "Đăng nhập thành công!");
-        if (!isRegistering) {
-          navigate("/");
+          const tokenPayload = JSON.parse(atob(data.token.split(".")[1]));
+          const role = tokenPayload.role || tokenPayload.roles?.[0] || "USER";
+
+          toast(
+            isRegistering ? "Đăng ký thành công!" : "Đăng nhập thành công!"
+          );
+          if (role === "ADMIN") {
+            console.log("Role:", role); // kiểm tra vai trò trả về
+
+            navigate("/dashboard");
+          } else {
+            navigate("/");
+          }
         }
       } else {
         const errorMsg =
@@ -94,9 +111,6 @@ function Login() {
                 required
               />
               <i className="bx bxs-lock-alt"></i>
-            </div>
-            <div className="forgot-link">
-              <a href="#">Forgot password?</a>
             </div>
             <button type="submit" className="btn">
               Login

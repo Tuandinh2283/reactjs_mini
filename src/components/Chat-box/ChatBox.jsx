@@ -103,7 +103,7 @@ const ChatBox = () => {
     if (!input.trim() || loading || !canSend) return;
 
     setCanSend(false);
-    setTimeout(() => setCanSend(true), 3000); // ngăn spam
+    setTimeout(() => setCanSend(true), 3000);
 
     const userMessage = { from: "user", text: input };
     setMessages((prev) => [...prev, userMessage]);

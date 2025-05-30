@@ -11,8 +11,7 @@ import "react-accessible-accordion/dist/fancy-example.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import House from "../../assets/thiet-ke-biet-thu-hien-dai-anh-hung.jpg";
 import "./Value.css";
-import data from "../../utils/accordion";
-
+import data from "../../utils/accordion"; // điều chỉnh đường dẫn nếu khác
 const Value = () => {
   return (
     <section className="v-wrapper">

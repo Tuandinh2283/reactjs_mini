@@ -1,0 +1,34 @@
+version: "3.8" # Thêm version cho rõ ràng
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-container
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongodb:/data/db # ✅ Sửa đúng cú pháp
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: abc123456789
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express-container
+    restart: always
+    ports:
+      - "8082:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: abc123456789
+      ME_CONFIG_MONGODB_URL: mongodb://root:abc123456789@mongo:27017/
+      ME_CONFIG_BASICAUTH: "false" # Đặt trong ngoặc kép cho an toàn
+
+#docker-compose -f mongo-restone.yml up --detach
+#docker-compose -f mongo-restone.yml down
+#mongosh "mongodb://root:Abc123456789@localhost:27018" --username root --authenticationData
+#https://atlas-education.s3.amazonaws.com/sampledata.archive
+
+#access to mongo-container's terminal
+#docker exec
