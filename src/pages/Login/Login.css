@@ -153,10 +153,29 @@
 .containers.active .form-box.login {
   display: none;
 }
-
+.form-box.register {
+  background-color: #fdfdfd; /* ví dụ: nền khác */
+}
 .containers:not(.active) .form-box.register {
   display: none;
 }
+.login-hint {
+  margin-top: 1rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.login-hint code {
+  background: #e0e0e0;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
 @media screen and (max-width: 430px) {
   .login-wrapper {
     height: auto;

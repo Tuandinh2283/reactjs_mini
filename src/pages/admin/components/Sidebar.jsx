@@ -7,10 +7,19 @@ import {
   BiStats,
   BiTask,
   BiHelpCircle,
+  BiLogOut,
 } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 import "../components/styles/sidebar.css";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token"); // Xóa token nếu cần
+    navigate("/login");
+  };
+
   return (
     <div className="menu">
       <div className="logo">
@@ -20,7 +29,7 @@ const Sidebar = () => {
       <div className="menu--list">
         <a href="#" className="item active">
           <BiHome className="icon" />
-          Dahboard
+          Dashboard
         </a>
         <a href="#" className="item">
           <BiTask className="icon" />
@@ -32,7 +41,7 @@ const Sidebar = () => {
         </a>
         <a href="#" className="item">
           <BiStats className="icon" />
-          Strats
+          Stats
         </a>
         <a href="#" className="item">
           <BiMessage className="icon" />
@@ -42,6 +51,10 @@ const Sidebar = () => {
           <BiHelpCircle className="icon" />
           Help
         </a>
+        <button className="item logout-btn" onClick={handleLogout}>
+          <BiLogOut className="icon" />
+          Back to Login
+        </button>
       </div>
     </div>
   );

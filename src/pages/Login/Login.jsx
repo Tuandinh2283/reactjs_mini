@@ -51,7 +51,7 @@ function Login() {
             isRegistering ? "Đăng ký thành công!" : "Đăng nhập thành công!"
           );
           if (role === "ADMIN") {
-            console.log("Role:", role); // kiểm tra vai trò trả về
+            console.log("Role:", role);
 
             navigate("/dashboard");
           } else {
@@ -176,6 +176,23 @@ function Login() {
                 ? "To keep connected with us please login with your personal info"
                 : "Enter your details and start your journey with us"}
             </p>
+
+            {!isRegistering && (
+              <div className="login-hint">
+                <p>
+                  📌 <strong>Dự án Dashboard:</strong>
+                  <br />
+                  Tài khoản: <code>admin</code> | Mật khẩu:{" "}
+                  <code>admin123</code>
+                </p>
+                <p>
+                  📌 <strong>Dự án người dùng:</strong>
+                  <br />
+                  Tài khoản: <code>new123</code> | Mật khẩu: <code>123456</code>
+                </p>
+              </div>
+            )}
+
             <button className="btn" type="button" onClick={toggleMode}>
               {isRegistering ? "Login" : "Register"}
             </button>
