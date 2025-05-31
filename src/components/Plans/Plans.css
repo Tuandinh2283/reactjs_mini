@@ -1,0 +1,133 @@
+:root {
+  --my-primary: #00bfff;
+  --my-secondary: #6b7280;
+  --my-accent: #606263;
+  --my-bg-light: #f9fafb;
+  --my-text-dark: #111827;
+  --my-text-light: #9ca3af;
+  --my-radius: 12px;
+  --my-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.plans-container {
+  margin-top: -4rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+  background-color: var(--my-bg-light);
+}
+
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  color: var(--my-text-dark);
+  padding: 2rem 1.5rem;
+  width: 16rem;
+  border-radius: var(--my-radius);
+  transition: all 0.3s ease;
+  box-shadow: var(--my-shadow);
+  min-height: 420px;
+  gap: 1.5rem;
+}
+
+.plan:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.plan:nth-child(2) {
+  background: var(--my-accent);
+  transform: scale(1.05);
+}
+
+.plan > svg {
+  fill: var(--my-primary);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.plan > :nth-child(2) {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--my-text-dark);
+}
+
+.plan > :nth-child(3) {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--my-primary);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+span {
+  color: var(--text-color);
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--my-secondary);
+}
+
+.feature img {
+  width: 1rem;
+  filter: brightness(100%);
+}
+
+.more-benefits {
+  font-size: 0.85rem;
+  color: var(--my-text-light);
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.more-benefits:hover {
+  text-decoration: underline;
+}
+
+.btn.plan-btn {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: var(--my-primary);
+  color: white;
+  border: none;
+  border-radius: var(--my-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.plan-btn:hover {
+  background-color: #0099e6; /* màu xanh đậm hơn một chút */
+}
+
+.plan-blur-1,
+.plan-blur-2 {
+  display: none; /* ẩn các background mờ nếu muốn giữ đơn giản */
+}
+
+@media screen and (max-width: 768px) {
+  .plan {
+    flex-direction: column;
+  }
+  .plan > :nth-child(2) {
+    transform: none;
+  }
+}

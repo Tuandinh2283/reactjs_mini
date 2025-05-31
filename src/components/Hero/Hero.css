@@ -1,0 +1,289 @@
+/* --- DESKTOP FIRST STYLE --- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  gap: 2rem;
+}
+
+.left-h {
+  padding: 2rem;
+  flex: 3;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.right-h {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
+  padding-right: 2rem;
+  padding-top: 5rem;
+}
+
+.the-best-ad {
+  margin-top: 4rem;
+  background-color: #363d42;
+  border-radius: 4rem;
+  width: fit-content;
+  padding: 20px 13px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.the-best-ad > span {
+  z-index: 2;
+}
+
+.the-best-ad > div {
+  position: absolute;
+  background-color: var(--primary);
+  width: 5.4rem;
+  height: 80%;
+  left: 8px;
+  border-radius: 3rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hero-text > div:nth-of-type(3) {
+  font-size: 1rem;
+  font-weight: 200;
+  text-transform: none;
+  width: 80%;
+  letter-spacing: 1px;
+}
+
+.figures {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.figures > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.figures > div > span:nth-of-type(1) {
+  font-size: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-buttons > :nth-child(1),
+.hero-buttons > :nth-child(2) {
+  width: 8rem;
+}
+
+.hero-buttons > :nth-child(1) {
+  color: white;
+  background-color: var(--primary);
+}
+
+.hero-buttons > :nth-child(2) {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+}
+
+.heart-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  position: absolute;
+  right: 4rem;
+  top: 7rem;
+  background-color: #2b2b2b;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  z-index: 10;
+  width: fit-content;
+  min-width: 8rem;
+}
+
+.heart-rate > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+.hero-image {
+  position: absolute;
+  top: 2rem;
+  right: -6rem;
+  width: 70rem;
+}
+
+.hero-image-back {
+  position: absolute;
+  top: 2rem;
+  right: 20rem;
+  z-index: -1;
+}
+
+.calories {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #e0f7fa, var(--gray));
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 38rem;
+  right: 40rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container {
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  margin-right: 2rem;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+  background-color: black;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-right: 5rem;
+}
+
+.hero-blur {
+  width: 28rem;
+  height: 30rem;
+  left: 0;
+  background: rgb(10, 184, 228);
+}
+
+/* ============================ */
+/* -------- RESPONSIVE -------- */
+/* ============================ */
+
+@media screen and (max-width: 1024px) {
+  .hero-text {
+    font-size: 3rem;
+  }
+
+  .hero-image {
+    width: 40rem;
+    right: 0;
+  }
+
+  .hero-image-back {
+    right: 10rem;
+  }
+
+  .calories {
+    right: 20rem;
+    top: 32rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .left-h {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .right-h {
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  .hero-text {
+    font-size: 2.2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text > div:nth-of-type(3) {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .figures {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .the-best-ad {
+    font-size: 0.8rem;
+    transform: scale(0.9);
+    align-self: center;
+  }
+
+  .heart-rate {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .calories {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .hero-image {
+    position: static;
+    width: 100%;
+    max-width: 20rem;
+    margin-top: 2rem;
+  }
+
+  .hero-image-back {
+    display: none;
+  }
+
+  .image-container {
+    width: 90%;
+    height: auto;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .image-container > img {
+    padding-right: 0;
+  }
+
+  .hero-blur {
+    width: 14rem;
+    height: 14rem;
+  }
+}

@@ -1,0 +1,241 @@
+/* ----- Giao diện chung (Desktop) ----- */
+
+.containers {
+  background-color: white;
+  width: 900px;
+  height: 550px;
+  display: flex;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+
+.login-wrapper {
+  height: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.6s ease-in-out;
+}
+
+.input-box {
+  position: relative;
+  margin: 20px 0;
+  width: 84%;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 40px 12px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-size: 14px;
+}
+
+.input-box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background-color: #93cde0;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #45c0ea;
+}
+
+.social-text {
+  margin: 20px 0;
+  text-align: center;
+  color: #999;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #f0f0f0;
+}
+
+.toggle-box {
+  width: 50%;
+  background: linear-gradient(to bottom, #54c7ee, #42b6e6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  padding: 20px 15px;
+  border-radius: 0 25px 25px 0;
+}
+
+.toggle-panel {
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.toggle-panel h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.toggle-panel p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  white-space: normal;
+}
+
+.toggle-panel .btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.toggle-panel .btn:hover {
+  background-color: white;
+  color: #00bfff;
+}
+
+.error-text {
+  background-color: #ffe5e5;
+  color: #c10000;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Toggle State */
+.containers.active .form-box.login {
+  display: none;
+}
+.form-box.register {
+  background-color: #fdfdfd; /* ví dụ: nền khác */
+}
+.containers:not(.active) .form-box.register {
+  display: none;
+}
+.login-hint {
+  margin-top: 1rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.login-hint code {
+  background: #e0e0e0;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+@media screen and (max-width: 430px) {
+  .login-wrapper {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .containers {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0;
+  }
+
+  .form-box,
+  .toggle-box {
+    width: 100%;
+    border-radius: 0;
+    padding: 25px 15px;
+  }
+
+  .form-box {
+    padding: 30px 15px;
+  }
+
+  .toggle-box {
+    order: -1;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .toggle-panel {
+    max-width: 80%;
+    word-break: break-word;
+  }
+
+  .toggle-panel h2 {
+    font-size: 24px;
+  }
+
+  .toggle-panel p {
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px;
+    width: 90%;
+    margin-top: 15px;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+
+  .input-box input {
+    width: 72%;
+  }
+}

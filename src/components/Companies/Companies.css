@@ -1,0 +1,47 @@
+.c-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Logo */
+.c-container img {
+  height: 7rem;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+/* Hover hiệu ứng */
+.c-container img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+/* Responsive cho tablet và mobile */
+@media (max-width: 768px) {
+  .c-container {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .c-container img {
+    height: 5rem; /* thu nhỏ logo trên mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .c-container {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .c-container img {
+    height: 4rem; /* nhỏ hơn nữa cho điện thoại nhỏ */
+  }
+}

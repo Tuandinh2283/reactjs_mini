@@ -1,0 +1,168 @@
+:root {
+  --primary: #00bfff;
+  --secondary: #6b7280;
+  --accent: #f0f4f8;
+  --bg-light: #f9fafb;
+  --text-dark: #111827;
+  --text-light: #9ca3af;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.v-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-light);
+  padding: 5rem 1.5rem;
+}
+
+.v-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.v-left,
+.v-right {
+  flex: 1;
+  min-width: 320px;
+}
+
+.image-container {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.01);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.v-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.orangeText {
+  color: #f97316;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.primaryText {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.secondaryText {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  line-height: 1.8;
+}
+
+.accordion {
+  margin-top: 2rem;
+  border: none;
+  width: 100%;
+}
+
+.accordionItem {
+  background-color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.accordionItem.expanded {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.accordionButton {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.accordionButton:hover {
+  background-color: var(--accent);
+}
+
+.icon {
+  padding: 0.6rem;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  fill: var(--primary);
+  width: 20px;
+  height: 20px;
+}
+
+.accordionButton .primaryText {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.accordionItemPanel {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  background-color: #fefefe;
+}
+
+.accordionItemPanel p {
+  margin: 0;
+  color: var(--secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .v-container {
+    flex-direction: column;
+  }
+
+  .v-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .accordionButton {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .accordionButton .primaryText {
+    margin-left: 0;
+  }
+}

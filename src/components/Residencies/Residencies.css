@@ -1,0 +1,176 @@
+/* Tổng wrapper để giới hạn chiều rộng toàn trang */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Wrapper cho khu vực slider, ẩn phần tràn ra khi kéo */
+.r-wrapper {
+  overflow: hidden;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative; /* Cho nút r-buttons định vị tuyệt đối */
+}
+
+/* Container bao quanh Swiper */
+.r-container {
+  padding-left: 20px;
+  padding-right: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Swiper control */
+.swiper {
+  overflow: hidden; /* Ẩn phần tràn khi swipe */
+  padding-right: 25px; /* Tùy chỉnh nếu slide cuối bị sát quá */
+}
+
+/* Slide animation */
+.swiper-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-slide-active .r-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.swiper-slide-prev .r-card,
+.swiper-slide-next .r-card {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+/* Card container nếu cần flex layout ngoài swiper */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card style */
+.r-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 266.5px;
+  flex-shrink: 0;
+  background-color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.r-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.r-card > img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.r-card > :nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: orange;
+}
+
+.r-card > :nth-child(3) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f3e72;
+}
+
+.r-card > :nth-child(4) {
+  font-size: 0.9rem;
+  color: #8c8b8b;
+  line-height: 1.3;
+}
+
+/* Text styles */
+.orangeText {
+  color: orange;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.primaryText {
+  font-size: 1.5rem;
+}
+
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.r-buttons {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  padding-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.r-buttons button {
+  padding: 8px 12px;
+  background-color: #e9e7e5;
+  border: none;
+  color: rgb(25, 24, 24);
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.r-buttons button:hover {
+  background-color: #b9bdc0;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .r-card {
+    width: 90vw;
+    padding: 0.8rem;
+  }
+
+  .r-card img {
+    height: 140px;
+  }
+
+  .r-card > :nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .r-card > :nth-child(3) {
+    font-size: 1.1rem;
+  }
+
+  .r-card > :nth-child(4) {
+    font-size: 0.9rem;
+  }
+
+  .page-wrapper {
+    padding: 0 1rem;
+  }
+
+  .card-container {
+    gap: 1rem;
+  }
+
+  .r-buttons {
+    top: -2.5rem;
+    right: 1rem;
+  }
+}

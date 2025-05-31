@@ -1,0 +1,30 @@
+# Xem thêm tại: https://help.github.com/articles/ignoring-files/
+
+# 👉 Thư viện, phụ thuộc
+node_modules/
+.pnp/
+.pnp.js
+
+# 👉 Kết quả test
+coverage/
+
+# 👉 File build production
+build/
+
+# 👉 File hệ thống, tạm thời, log
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 👉 Bỏ qua toàn bộ các biến môi trường
+.env
+.env.*
+!.env.example  # (giữ lại nếu bạn tạo file mẫu cấu hình cho người khác)
+
+# 👉 IDEs và tools
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project

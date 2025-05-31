@@ -1,0 +1,114 @@
+.profile {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edit {
+  background: #dde6ed;
+  padding: 12px;
+  border-radius: 10px;
+  color: #969393;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit .icom {
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.user--profile {
+  height: 85%;
+  margin-top: 2rem;
+  background: #dde6ed;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user--detall {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.user--detall img {
+  background: #fff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user--detall .username {
+  color: #526d82;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profession {
+  color: #969393;
+  font-size: 14px;
+}
+
+.user-courses {
+  background: #fff;
+  flex: 1;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.course {
+  background: #dde6ed;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.course-detail {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.course-cover {
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.course .duration {
+  font-size: 12px;
+  color: #555;
+}
+
+.course .action {
+  font-weight: 900;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
