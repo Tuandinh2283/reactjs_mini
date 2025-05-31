@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./App.css";
 
 // Component layout phụ
